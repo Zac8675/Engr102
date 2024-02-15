@@ -17,10 +17,10 @@ def main():
     
     
     # TODO: Read the def it_matters() and fix the error
-    it_matters()
+    def it_matters():
 
     # TODO: Read the def hello_world() information and work through.
-    hello_world()
+        hello_world()
 
     # TODO: Read the def it_does_not_compute() information and work through.
     it_does_not_compute()
@@ -52,23 +52,23 @@ def you_forgot_something():
 
     # TODO: What is the difference between = (single equals) and == (double equals)?
     # You may need to use google to find the answer.
-    # Your Answer: 
+    # Your Answer: sungle equals doesnt work
 
-    if 1 + 1 = 2:
+    if 1 + 1 == 2:
         print("They are equal!")
 
     # TODO: Resolve the error and run the code again to make sure nothing happens
 
 
-def it_matters():
+    def it_matters():
 
     # You'll notice that indents actually matter in Python
 
     # TODO: What is the type of error for this?
     # Your Answer: 
 
-    for i in range(10):
-    print(i)
+        for i in range(10):
+            print(i)
 
     # TODO: Resolve the error and run the code again to make sure nothing happens
 
@@ -79,7 +79,7 @@ def hello_world():
     # TODO: What is the type of error for this? (What's in the place of xxxxxxx)
     # Your answer: 
     
-    prnit("Hello World")
+    print("Hello World")
 
     # TODO resolve the error, and run the code again to make sure nothing happens.
 
@@ -90,7 +90,7 @@ def it_does_not_compute():
     # TODO: What is the type of error for this? (What's in the place of xxxxxxx)
     # Your answer: 
 
-    x = "18"    # This is a string
+    x = 18    # This is a string
     y = 3       # This is an integer
 
     z = x / y
@@ -110,10 +110,10 @@ def my_list_is_too_short():
     # What happens if we try to get an index that isn't within 0-3?
 
     # TODO: What is the type of error for this?
-    # Your answer: 
+    # Your answer: wrong list range
 
     my_list = ["C", "O", "O", "L"]
-    print(my_list[4])
+    print(my_list[3])
 
     # TODO resolve the error, and run the code again to make sure nothing happens.
 
@@ -123,9 +123,9 @@ def everyone_knows_this_math_rule():
     # Something bad will happen if we break a rule of math...
 
     # TODO: What is the type of error for this?
-    # Your answer: 
+    # Your answer: can't divide by zero
 
-    x = 0
+    x = 2
     y = 10
 
     z = y / x
@@ -139,10 +139,10 @@ def giving_functions_the_wrong_stuff():
     # the int() function is built-in and converts an integer to a string
 
     # TODO: What is the type of error for this?
-    # Your answer: 
+    # Your answer: invalid literal
 
     my_int = int("5") # This works fine, because "5" is a number
-    my_int_2 = int("Dan") # What happens if we try to pass a non-number?
+    my_int_2 = int("6") # What happens if we try to pass a non-number?
 
     # TODO resolve the error, and run the code again to make sure nothing happens.
 
@@ -157,7 +157,7 @@ def make_your_own_error():
 
     x = 12 # Oops, this isn't between 1 and 10
 
-    if x < 1 or x > 10:
+    if x < 1 or x < 10:
         raise TypeError("The number must be between 1 and 10")
     
     # TODO: Run the code to see how our raised error occurs
@@ -175,7 +175,7 @@ def handling_errors():
     # For example, maybe we want to use the int() function to convert a string to an integer.
     # So, we ask the user to give us a number to convert, but instead they give us a word.
 
-    bad_user_input = "What is a number?"
+    bad_user_input == "What is a number?"
 
     # Should this crash our code?
     # Probably not. Maybe instead we will just assign them a number if they don't give us one.
@@ -188,7 +188,7 @@ def handling_errors():
         int(bad_user_input)
     except ValueError: # except will run if the ValueError exception is found
         print("Well, that wasn't a number, so we'll just give you one")
-        bad_user_input = 7
+        bad_user_input = 2
     else: # else is optional, but it will run if the exception isn't found.
         print("Hey, you know how to type a number. Good job!")
 
